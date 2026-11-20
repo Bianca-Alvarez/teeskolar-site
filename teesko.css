@@ -1,28 +1,22 @@
-:root {
-  --bg-pink: #f8e2e2;
-  --teal-main: #005678;
-  --teal-dark: #00425c;
-  --gold-star: #ffde59;
-  --white: #ffffff;
-  --text-dark: #111111;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Inter, Arial, sans-serif;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Secular One', sans-serif;
 }
 
 body {
-  background-color: var(--bg-pink);
-  color: var(--text-dark);
+  background-color: #FFEAEA;
+  color: #111;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Header */
 header {
   padding: 18px 5% 14px;
   max-width: 1020px;
@@ -56,7 +50,6 @@ header {
   color: #222;
 }
 
-/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -65,15 +58,15 @@ nav {
   flex-wrap: wrap;
 }
 
-.nav-item {
+.nav-item, .search-wrapper {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
 .nav-icon {
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -84,8 +77,8 @@ nav {
 }
 
 .nav-btn {
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   border: none;
   padding: 6px 22px;
   border-radius: 6px;
@@ -95,18 +88,12 @@ nav {
 }
 
 .nav-btn:hover, .nav-btn.active {
-  background-color: var(--teal-dark);
-}
-
-.search-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  background-color: #00425c;
 }
 
 .search-icon {
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   padding: 5px 8px;
   border-radius: 4px;
   font-size: 0.78rem;
@@ -116,11 +103,10 @@ nav {
   padding: 5px 10px;
   border: 1.5px solid #222;
   border-radius: 4px;
-  background-color: var(--white);
+  background-color: #fff;
   width: 165px;
 }
 
-/* Main */
 main {
   flex: 1;
   max-width: 980px;
@@ -136,15 +122,14 @@ main {
   display: block;
 }
 
-/* Hero Banner */
 .hero-wrapper {
   position: relative;
   margin: 12px 0 28px;
 }
 
 .hero-banner {
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   text-align: center;
   padding: 26px 55px;
   font-size: 1.05rem;
@@ -153,7 +138,7 @@ main {
 
 .star-decor {
   position: absolute;
-  color: var(--gold-star);
+  color: #ffde59;
   font-size: 4.2rem;
   line-height: 1;
   text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.25);
@@ -172,7 +157,6 @@ main {
   transform: rotate(15deg);
 }
 
-/* Home Product Grid */
 .section-title {
   font-size: 1.35rem;
   font-weight: 800;
@@ -199,29 +183,31 @@ main {
 
 .arch-card {
   width: 100%;
-  background-color: var(--teal-main);
+  background-color: #005678;
   border-radius: 150px 150px 0 0;
   padding: 18px 18px 14px;
   text-align: center;
-  color: var(--white);
+  color: #fff;
 }
 
 .arch-inner {
   background-color: #e6e6e6;
   border-radius: 135px 135px 0 0;
-  height: 195px;
+  height: 230px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
   overflow: hidden;
-  padding: 8px;
 }
 
 .arch-inner img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.18);
+  display: block;
 }
 
 .arch-card h3 {
@@ -242,8 +228,8 @@ main {
 
 .pill {
   flex: 1;
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   text-align: center;
   padding: 7px 6px;
   border-radius: 6px;
@@ -251,7 +237,6 @@ main {
   font-weight: 600;
 }
 
-/* SHOP & SINGLE PRODUCT ROW LAYOUT (Matches your Figma bottom frame) */
 .shop-vertical-list {
   display: flex;
   flex-direction: column;
@@ -267,12 +252,6 @@ main {
   border-bottom: 1px solid rgba(0, 86, 120, 0.2);
 }
 
-@media (max-width: 720px) {
-  .shop-item-row {
-    grid-template-columns: 1fr;
-  }
-}
-
 .shop-right-panel {
   display: flex;
   flex-direction: column;
@@ -280,8 +259,8 @@ main {
 }
 
 .desc-box {
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   padding: 16px 20px;
   font-size: 0.92rem;
   line-height: 1.5;
@@ -297,8 +276,8 @@ main {
 
 .options-teal-box {
   flex: 1;
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   padding: 12px 16px;
   display: flex;
   align-items: center;
@@ -318,7 +297,7 @@ main {
   border-radius: 4px;
   border: none;
   font-weight: 600;
-  color: var(--text-dark);
+  color: #111;
 }
 
 .qty-control {
@@ -330,8 +309,8 @@ main {
 .qty-btn {
   width: 24px;
   height: 24px;
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -339,7 +318,7 @@ main {
 }
 
 .qty-display {
-  background: var(--white);
+  background: #fff;
   border: 1px solid #888;
   padding: 2px 10px;
   font-weight: 700;
@@ -348,8 +327,8 @@ main {
 
 .order-action-btn {
   align-self: center;
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   border: none;
   padding: 10px 44px;
   border-radius: 6px;
@@ -359,20 +338,19 @@ main {
 }
 
 .order-action-btn:hover {
-  background-color: var(--teal-dark);
+  background-color: #00425c;
 }
 
 .back-btn {
   background: none;
   border: none;
-  color: var(--teal-main);
+  color: #005678;
   font-weight: 700;
   cursor: pointer;
   margin-bottom: 16px;
   font-size: 0.95rem;
 }
 
-/* Terms of Service (2-column layout matching Figma) */
 .terms-title {
   text-align: center;
   font-size: 1.35rem;
@@ -387,12 +365,6 @@ main {
   line-height: 1.48;
 }
 
-@media (max-width: 720px) {
-  .terms-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .terms-col p {
   margin-bottom: 10px;
 }
@@ -405,8 +377,8 @@ main {
 
 .link-btn {
   margin-top: 8px;
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   border: none;
   padding: 6px 16px;
   border-radius: 5px;
@@ -414,7 +386,6 @@ main {
   font-size: 0.8rem;
 }
 
-/* Privacy Policy */
 .privacy-box {
   max-width: 760px;
   margin: 0 auto;
@@ -431,7 +402,6 @@ main {
   margin-bottom: 10px;
 }
 
-/* Contact Page */
 .contact-header {
   text-align: center;
   margin-bottom: 22px;
@@ -441,12 +411,6 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px;
-}
-
-@media (max-width: 720px) {
-  .contact-layout {
-    grid-template-columns: 1fr;
-  }
 }
 
 .contact-form {
@@ -464,15 +428,15 @@ main {
   padding: 8px;
   border: 1px solid #bbb;
   border-radius: 4px;
-  background: var(--white);
+  background: #fff;
 }
 
 .send-btn {
   margin-top: 12px;
   width: 90px;
   padding: 7px;
-  background-color: var(--teal-main);
-  color: var(--white);
+  background-color: #005678;
+  color: #fff;
   border: none;
   border-radius: 4px;
   font-weight: 700;
@@ -512,7 +476,7 @@ main {
 
 .social-badge {
   background: #111;
-  color: var(--white);
+  color: #fff;
   width: 28px;
   height: 28px;
   border-radius: 5px;
@@ -522,7 +486,6 @@ main {
   font-weight: bold;
 }
 
-/* Modal */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -538,13 +501,13 @@ main {
 }
 
 .modal-card {
-  background: var(--white);
+  background: #fff;
   padding: 24px;
   border-radius: 8px;
   width: 90%;
   max-width: 410px;
   position: relative;
-  border-top: 8px solid var(--teal-main);
+  border-top: 8px solid #005678;
 }
 
 .close-modal {
@@ -558,7 +521,7 @@ main {
 }
 
 .modal-sub {
-  color: var(--teal-main);
+  color: #005678;
   font-weight: 700;
   margin: 6px 0 14px;
   font-size: 0.9rem;
@@ -582,8 +545,8 @@ main {
 .confirm-order-btn {
   width: 100%;
   padding: 10px;
-  background: var(--teal-main);
-  color: var(--white);
+  background: #005678;
+  color: #fff;
   border: none;
   border-radius: 6px;
   font-weight: 700;
@@ -591,13 +554,12 @@ main {
   margin-top: 6px;
 }
 
-/* Toast & Footer */
 .toast {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background: var(--teal-dark);
-  color: var(--white);
+  background: #00425c;
+  color: #fff;
   padding: 12px 20px;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -612,9 +574,15 @@ main {
 }
 
 footer {
-  background-color: var(--teal-main);
-  color: var(--gold-star);
+  background-color: #005678;
+  color: #ffde59;
   text-align: center;
   padding: 10px;
   font-size: 0.82rem;
+}
+
+@media (max-width: 720px) {
+  .shop-item-row, .terms-grid, .contact-layout {
+    grid-template-columns: 1fr;
+  }
 }
